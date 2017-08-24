@@ -1,0 +1,9 @@
+---
+
+macos_sus__domain: "/Library/Preferences/com.apple.SoftwareUpdate.plist"
+macos_sus__key: "CatalogURL"
+macos_sus__server: "http://asus.pretendcorp.com"
+macos_sus__sus_1010: "{{ macos_sus__server }}/content/catalogs/others/index-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog"
+macos_sus__sus_1011: "{{ macos_sus__server }}/content/catalogs/others/index-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog"
+macos_sus__sus_1012: "{{ macos_sus__server }}/content/catalogs/others/index-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog"
+macos_sus__sus_1013: "{{ macos_sus__server }}/content/catalogs/others/index-10.13-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog"

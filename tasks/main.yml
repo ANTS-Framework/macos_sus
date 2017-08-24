@@ -1,0 +1,38 @@
+---
+
+  - name: Set SoftwareUpdateServerURL for macos 10.10
+    set_fact:
+        macos_sus__url: "{{ macos_sus__sus_1010 }}"
+    when:
+        - ansible_distribution_version | version_compare('10.10.0', '>=')
+        - ansible_distribution_version | version_compare('10.11.0', '<')
+
+  - name: Set SoftwareUpdateServerURL for macos 10.11
+    set_fact:
+        macos_sus__url: "{{ macos_sus__sus_1011 }}"
+    when:
+        - ansible_distribution_version | version_compare('10.11.0', '>=')
+        - ansible_distribution_version | version_compare('10.12.0', '<')
+
+  - name: Set SoftwareUpdateServerURL for macos 10.12
+    set_fact:
+        macos_sus__url: "{{ macos_sus__sus_1012 }}"
+    when:
+        - ansible_distribution_version | version_compare('10.12.0', '>=')
+        - ansible_distribution_version | version_compare('10.13.0', '<')
+
+  - name: Set SoftwareUpdateServerURL for macos 10.13
+    set_fact:
+        macos_sus__url: "{{ macos_sus__sus_1013 }}"
+    when:
+        - ansible_distribution_version | version_compare('10.13.0', '>=')
+        - ansible_distribution_version | version_compare('10.14.0', '<')
+
+  - name: Write SoftwareUpdateServerURL
+    osx_defaults:
+        domain: "{{ macos_sus__domain }}"
+        key: "{{ macos_sus__key }}"
+        value: "{{ macos_sus__url }}"
+        type: "string"
+        state: present
+    when: macos_sus__url is defined
