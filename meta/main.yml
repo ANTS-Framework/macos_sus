@@ -1,0 +1,18 @@
+---
+
+galaxy_info:
+    author: Balz Aschwanden
+    description: This role uses the defaults command to manage the CatalogURL preference
+    company: IT Services University of Basel
+    license: GPLv3
+    min_ansible_version: 2.3.2.0
+    platforms:
+    - name: macOSX
+    versions:
+    - all
+    galaxy_tags:
+        - macOS
+        - macsible
+        - client
+        - ansible-pull
+dependencies: []
