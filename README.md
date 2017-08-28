@@ -1,6 +1,8 @@
 macOS Software Update Server
 ============================
 
+[![Build Status](https://travis-ci.org/ANTS-Framework/macos_sus.svg?branch=master)](https://travis-ci.org/ANTS-Framework/macos_sus)
+
 This role uses the `defaults` command to manage the CatalogURL
 preference in `/Library/Preferences/com.apple.SoftwareUpdate.plist`.
 
