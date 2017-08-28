@@ -1,0 +1,10 @@
+language: python
+
+env:
+    - ANSIBLE_VERSION: "2.3.2.0"
+
+script:
+    - echo "Tests to be defined"
+
+notifications:
+    webhooks: https://galaxy.ansible.com/api/v1/notifications/
