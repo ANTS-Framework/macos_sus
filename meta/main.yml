@@ -14,5 +14,7 @@ galaxy_info:
         - macOS
         - macsible
         - client
-        - ansible-pull
+        - antsFramework
+        - ansiblePull
+        - unibas
 dependencies: []
