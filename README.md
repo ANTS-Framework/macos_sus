@@ -32,6 +32,8 @@ Example Playbook
 ----------------
 ```yml
 - hosts: all_macos
+  vars:
+    - macos_sus__server: "http://sus.myurl.io"
   roles:
   - role: macos_sus
 ```
