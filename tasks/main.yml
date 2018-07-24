@@ -4,29 +4,29 @@
     set_fact:
         macos_sus__url: "{{ macos_sus__sus_1010 }}"
     when:
-        - ansible_distribution_version | version_compare('10.10.0', '>=')
-        - ansible_distribution_version | version_compare('10.11.0', '<')
+        - ansible_distribution_version.split('.')[0] == '10'
+        - ansible_distribution_version.split('.')[1] == '10'
 
   - name: Set SoftwareUpdateServerURL for macos 10.11
     set_fact:
         macos_sus__url: "{{ macos_sus__sus_1011 }}"
     when:
-        - ansible_distribution_version | version_compare('10.11.0', '>=')
-        - ansible_distribution_version | version_compare('10.12.0', '<')
+        - ansible_distribution_version.split('.')[0] == '10'
+        - ansible_distribution_version.split('.')[1] == '11'
 
   - name: Set SoftwareUpdateServerURL for macos 10.12
     set_fact:
         macos_sus__url: "{{ macos_sus__sus_1012 }}"
     when:
-        - ansible_distribution_version | version_compare('10.12.0', '>=')
-        - ansible_distribution_version | version_compare('10.13.0', '<')
+        - ansible_distribution_version.split('.')[0] == '10'
+        - ansible_distribution_version.split('.')[1] == '12'
 
   - name: Set SoftwareUpdateServerURL for macos 10.13
     set_fact:
         macos_sus__url: "{{ macos_sus__sus_1013 }}"
     when:
-        - ansible_distribution_version | version_compare('10.13.0', '>=')
-        - ansible_distribution_version | version_compare('10.14.0', '<')
+        - ansible_distribution_version.split('.')[0] == '10'
+        - ansible_distribution_version.split('.')[1] == '13'
 
   - name: Write SoftwareUpdateServerURL
     osx_defaults:
