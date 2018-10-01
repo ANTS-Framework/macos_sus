@@ -28,6 +28,13 @@
         - ansible_distribution_version.split('.')[0] == '10'
         - ansible_distribution_version.split('.')[1] == '13'
 
+  - name: Set SoftwareUpdateServerURL for macos 10.14
+    set_fact:
+        macos_sus__url: "{{ macos_sus__sus_1014 }}"
+    when:
+        - ansible_distribution_version.split('.')[0] == '10'
+        - ansible_distribution_version.split('.')[1] == '14'
+
   - name: Write SoftwareUpdateServerURL
     osx_defaults:
         domain: "{{ macos_sus__domain }}"
