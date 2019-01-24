@@ -43,3 +43,15 @@
         type: "string"
         state: present
     when: macos_sus__url is defined
+
+  - name: Configure updates over HTTP
+    osx_defaults:
+        domain: "{{ macos_sus__domain }}"
+        key: "{{ macos_sus__SUDisableEVCheck_key }}"
+        value: "{{ macos_sus__SUDisableEVCheck_val }}"
+        type: "bool"
+        state: present
+    when:
+        - ansible_distribution_version.split('.')[0] == '10'
+        - ansible_distribution_version.split('.')[1] >= '14'
+

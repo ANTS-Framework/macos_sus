@@ -1,5 +1,10 @@
 ---
 
+# Configure updates over HTTP
+# https://github.com/wdas/reposado/blob/master/docs/client_configuration.md#mojave-clients
+macos_sus__SUDisableEVCheck_key: "SUDisableEVCheck"
+macos_sus__SUDisableEVCheck_val: "false"
+#
 # Apple software update server preference domain and key
 macos_sus__domain: "/Library/Preferences/com.apple.SoftwareUpdate.plist"
 macos_sus__key: "CatalogURL"
