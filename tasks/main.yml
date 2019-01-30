@@ -41,7 +41,7 @@
         key: "{{ macos_sus__key }}"
         value: "{{ macos_sus__url }}"
         type: "string"
-        state: present
+        state: "{{ macos_sus__key_state }}"
     when: macos_sus__url is defined
 
   - name: Configure updates over HTTP
@@ -50,7 +50,7 @@
         key: "{{ macos_sus__SUDisableEVCheck_key }}"
         value: "{{ macos_sus__SUDisableEVCheck_val }}"
         type: "bool"
-        state: present
+        state: "{{ macos_sus__SUDisableEVCheck_state }}"
     when:
         - ansible_distribution_version.split('.')[0] == '10'
         - ansible_distribution_version.split('.')[1] >= '14'

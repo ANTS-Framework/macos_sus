@@ -4,10 +4,12 @@
 # https://github.com/wdas/reposado/blob/master/docs/client_configuration.md#mojave-clients
 macos_sus__SUDisableEVCheck_key: "SUDisableEVCheck"
 macos_sus__SUDisableEVCheck_val: "false"
+macos_sus__SUDisableEVCheck_state: "present"
 #
 # Apple software update server preference domain and key
 macos_sus__domain: "/Library/Preferences/com.apple.SoftwareUpdate.plist"
 macos_sus__key: "CatalogURL"
+macos_sus__key_state: "present"
 # Your base url
 macos_sus__server: "http://asus.pretendcorp.com"
 # Final url based on OS version
